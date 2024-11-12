@@ -21,17 +21,20 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
      args: {
           children: "Button",
+          type: "contained",
      },
 };
 
 export const Dangerous: Story = {
      args: {
           variant: "dangerous",
+          type: "contained",
      },
 };
 
 export const Success: Story = {
      args: {
           variant: "success",
+          type: "contained",
      },
 };

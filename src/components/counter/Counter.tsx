@@ -17,8 +17,12 @@ export const Counter: React.FC = React.memo(() => {
      return (
           <S.Container>
                <S.ButtonGroup $layout="vertical">
-                    <Button variant="success">save</Button>
-                    <Button variant="dangerous">delete</Button>
+                    <Button type="outlined" variant="success">
+                         save
+                    </Button>
+                    <Button type="outlined" variant="dangerous">
+                         delete
+                    </Button>
                </S.ButtonGroup>
                <S.CounterArea>
                     <S.Counter>{count}</S.Counter>
@@ -32,7 +36,9 @@ export const Counter: React.FC = React.memo(() => {
                     </S.ButtonGroup>
                </S.CounterArea>
                <S.ButtonGroup $layout="vertical">
-                    <Button onClick={onResume}>resume</Button>
+                    <Button type="outlined" onClick={onResume}>
+                         resume
+                    </Button>
                </S.ButtonGroup>
           </S.Container>
      );

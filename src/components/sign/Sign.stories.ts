@@ -7,6 +7,9 @@ const meta = {
      component: Sign,
      parameters: {
           layout: "centered",
+          backgrounds: {
+               default: "dark",
+          },
      },
      tags: ["autodocs"],
      argTypes: {
