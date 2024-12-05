@@ -9,16 +9,19 @@ type Props = {
      onClick?: () => void;
      variant?: VariantProps;
      type?: TypeProps;
+     disabled?: boolean;
 };
 
-export const Button: React.FC<Props> = React.memo(({ type = "contained", variant = "primary", ...props }) => {
-     const clickHandler = () => {
-          props?.onClick?.();
-     };
+export const Button: React.FC<Props> = React.memo(
+     ({ disabled = false, type = "contained", variant = "primary", ...props }) => {
+          const clickHandler = () => {
+               props?.onClick?.();
+          };
 
-     return (
-          <S.Button $type={type} onClick={clickHandler} $variant={variant}>
-               {props.children}
-          </S.Button>
-     );
-});
+          return (
+               <S.Button $type={type} $disabled={disabled} onClick={clickHandler} $variant={variant}>
+                    {props.children}
+               </S.Button>
+          );
+     },
+);

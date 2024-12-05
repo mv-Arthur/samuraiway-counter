@@ -1,21 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Counter } from "./Counter";
+import { ListItem } from "./ListItem";
 
 const meta = {
-     title: "Components/Counter",
-     component: Counter,
+     title: "Components/ListItem",
+     component: ListItem,
      parameters: {
           layout: "centered",
      },
      tags: ["autodocs"],
-} satisfies Meta<typeof Counter>;
+} satisfies Meta<typeof ListItem>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
      args: {
-          id: "1",
+          message: "anymore else",
+          variant: "BORDER",
      },
 };

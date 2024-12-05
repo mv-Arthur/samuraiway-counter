@@ -1,21 +1,23 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Counter } from "./Counter";
+import { AddItemForm } from "./AddItemForm";
+import { fn } from "@storybook/test";
 
 const meta = {
-     title: "Components/Counter",
-     component: Counter,
+     title: "Components/AddItemForm",
+     component: AddItemForm,
      parameters: {
           layout: "centered",
      },
      tags: ["autodocs"],
-} satisfies Meta<typeof Counter>;
+     args: {},
+} satisfies Meta<typeof AddItemForm>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
      args: {
-          id: "1",
+          onSubmit: fn(),
      },
 };

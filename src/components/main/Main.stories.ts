@@ -1,21 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Counter } from "./Counter";
+import { Main } from "./Main";
 
 const meta = {
-     title: "Components/Counter",
-     component: Counter,
+     title: "Components/Main",
+     component: Main,
      parameters: {
           layout: "centered",
      },
      tags: ["autodocs"],
-} satisfies Meta<typeof Counter>;
+} satisfies Meta<typeof Main>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
-     args: {
-          id: "1",
-     },
-};
+export const Primary: Story = {};

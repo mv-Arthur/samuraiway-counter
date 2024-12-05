@@ -1,21 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Counter } from "./Counter";
+import { Chevron } from "./Chevron";
 
 const meta = {
-     title: "Components/Counter",
-     component: Counter,
+     title: "Components/Icons/Chevron",
+     component: Chevron,
      parameters: {
           layout: "centered",
      },
      tags: ["autodocs"],
-} satisfies Meta<typeof Counter>;
+     args: {},
+} satisfies Meta<typeof Chevron>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
      args: {
-          id: "1",
+          value: false,
      },
 };
