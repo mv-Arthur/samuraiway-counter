@@ -1,5 +1,6 @@
 {
      "name": "samurai-way-counter",
+     "homepage": "http://malakhovarthur.github.io/samuraiway-counter/",
      "private": true,
      "version": "0.0.0",
      "type": "module",
@@ -10,7 +11,9 @@
           "preview": "vite preview",
           "storybook": "storybook dev -p 6006",
           "build-storybook": "storybook build",
-          "test": "jest --watch"
+          "test": "jest --watch",
+          "predeploy": "npm run build",
+          "deploy": "gh-pages -d dist"
      },
      "dependencies": {
           "@babel/preset-env": "^7.26.0",
@@ -20,6 +23,7 @@
           "@types/uuid": "^10.0.0",
           "axios": "^1.7.7",
           "babel-jest": "^29.7.0",
+          "gh-pages": "^6.2.0",
           "jest-environment-jsdom": "^29.7.0",
           "react": "^18.3.1",
           "react-dom": "^18.3.1",
